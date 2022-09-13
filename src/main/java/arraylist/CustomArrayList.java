@@ -13,31 +13,36 @@ public class CustomArrayList<V> {
         return true;
     }
 
-    public void add(int key, V value) {
+    public void add(int index, V value) {
         updateElementDataLength();
-        System.arraycopy(elementData, key, elementData, key + 1, size - key);
+        System.arraycopy(elementData, index, elementData, index + 1, size - index);
+        elementData[index] = value;
+        size++;
     }
 
-    public V get(int key) {
-        if (elementData.length >= key) {
-            return elementData[key];
+    public V get(int index) {
+        if (size > index) {
+            return elementData[index];
         }
         return null;
     }
 
-    public V set(int key, V value) {
-        if (elementData.length >= key && elementData[key] != null) {
-            elementData[key] = value;
-            return value;
+    public V set(int index, V value) {
+        if (size > index) {
+            elementData[index] = value;
+            return elementData[index];
         }
         return null;
     }
 
-    public V remove(int key) {
-        var val = elementData[key];
-        System.arraycopy(elementData, key + 1, elementData, key, size - key);
-        size--;
-        return val;
+    public V remove(int index) {
+        if (size > index) {
+            var val = elementData[index];
+            System.arraycopy(elementData, index + 1, elementData, index, size - index);
+            size--;
+            return val;
+        }
+        return null;
     }
 
     public boolean remove(V value) {
@@ -55,11 +60,12 @@ public class CustomArrayList<V> {
 
     public void clear() {
         elementData = (V[]) new Object[10];
+        size = 0;
     }
 
     public boolean contains(V value) {
-        for (V elem : elementData) {
-            if (elem.equals(value)) {
+        for (int i = 0; i < size; i++) {
+            if (elementData[i].equals(value)) {
                 return true;
             }
         }
@@ -77,9 +83,9 @@ public class CustomArrayList<V> {
 
     public boolean isEmpty() {
         if (elementData[0] != null) {
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
     public int lastIndexOf(V value) {
@@ -93,19 +99,27 @@ public class CustomArrayList<V> {
     }
 
     protected void removeRange(int fromIndex, int toIndex) {
-        size = size - toIndex + fromIndex;
-        System.arraycopy(elementData, toIndex, elementData, fromIndex, size);
-
+        if (fromIndex < toIndex && toIndex < size) {
+            size = size - toIndex + fromIndex - 1;
+            System.arraycopy(elementData, toIndex + 1, elementData, fromIndex, size);
+        }
     }
 
-    public V[] toArray() {
-        return elementData;
+    public Object[] toArray() {
+        if (!isEmpty()) {
+            var array = (V[]) new Object[size];
+            System.arraycopy(elementData, 0, array, 0, size);
+            return array;
+        }
+        return null;
     }
 
     public void trimToSize() {
-        V[] tmp = elementData;
-        elementData = (V[]) new Object[size];
-        System.arraycopy(tmp, 0, elementData, 0, size);
+        if(elementData[0] != null) {
+            V[] tmp = elementData;
+            elementData = (V[]) new Object[size];
+            System.arraycopy(tmp, 0, elementData, 0, size);
+        }
     }
 
     private void updateElementDataLength() {
@@ -116,4 +130,16 @@ public class CustomArrayList<V> {
         }
     }
 
+    @Override
+    public java.lang.String toString() {
+        var str = new StringBuilder();
+        str.append("[");
+        for (int i = 0; i < size - 1; i++) {
+            str.append(elementData[i].toString());
+            str.append(", ");
+        }
+        str.append(elementData[size - 1].toString());
+        str.append("]");
+        return str.toString();
+    }
 }
