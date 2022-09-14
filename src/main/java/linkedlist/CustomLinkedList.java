@@ -212,6 +212,28 @@ public class CustomLinkedList<V> {
         }
         return null;
     }
+    public V set(int index, V value){
+        var elem = first;
+        var num = 0;
+        while (elem != null){
+            if(num == index){
+                elem.value = value;
+                return value;
+            }
+            num ++;
+            elem = elem.next;
+        }
+        return null;
+    }
+    public int size(){
+        var elem = first;
+        var num = 0;
+        while (elem != null){
+            elem = elem.next;
+            num ++;
+        }
+        return num;
+    }
     @Override
     public String toString(){
         var str = new StringBuilder();
