@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="linkedlist.CustomLinkedListTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-09-14T01:02:35" hostname="fedora" time="0.047">
+  <properties/>
+  <testcase name="lastIndexOfReturnMinusOne_ifEmpty_ifNotFound()" classname="linkedlist.CustomLinkedListTest" time="0.026"/>
+  <testcase name="addShouldSetValue()" classname="linkedlist.CustomLinkedListTest" time="0.001"/>
+  <testcase name="addFirstShouldAddElementToFirstElementOnList()" classname="linkedlist.CustomLinkedListTest" time="0.003"/>
+  <testcase name="indexOfReturnFirstIndexOfElement_ifNotEmpty_ifFound()" classname="linkedlist.CustomLinkedListTest" time="0.001"/>
+  <testcase name="containsReturnTrue_ifFound()" classname="linkedlist.CustomLinkedListTest" time="0.001"/>
+  <testcase name="addLastShouldAddElementToEndOnList()" classname="linkedlist.CustomLinkedListTest" time="0.001"/>
+  <testcase name="lastIndexOfReturnLastIndexOfElement_ifNotEmpty_ifFound()" classname="linkedlist.CustomLinkedListTest" time="0.001"/>
+  <testcase name="indexOfReturnMinusOne_ifEmpty_ifNotFound()" classname="linkedlist.CustomLinkedListTest" time="0.001"/>
+  <testcase name="containsReturnFalse_ifNotFound()" classname="linkedlist.CustomLinkedListTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

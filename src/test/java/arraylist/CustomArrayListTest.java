@@ -203,5 +203,5 @@ public class CustomArrayListTest {
         //given
         assertEquals(res.length, 3);
     }
-    
+
 }
