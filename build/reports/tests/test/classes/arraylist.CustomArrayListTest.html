@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - CustomLinkedListTest</title>
+<title>Test results - CustomArrayListTest</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>CustomLinkedListTest</h1>
+<h1>CustomArrayListTest</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/linkedlist.html">linkedlist</a> &gt; CustomLinkedListTest</div>
+<a href="../packages/arraylist.html">arraylist</a> &gt; CustomArrayListTest</div>
 <div id="summary">
 <table>
 <tr>
@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">19</div>
+<div class="counter">20</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.152s</div>
+<div class="counter">0.141s</div>
 <p>duration</p>
 </div>
 </td>
@@ -75,97 +75,102 @@
 </tr>
 </thead>
 <tr>
-<td class="success">addAllToEmpty()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">addAllToNotEmpty()</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">addElementByIndex()</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">addFirstShouldAddElementToFirstElementOnList()</td>
-<td class="success">0.005s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">addLastShouldAddElementToEndOnList()</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">addShouldSetValue()</td>
-<td class="success">0.093s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">containsReturnFalse_ifNotFound()</td>
-<td class="success">0.004s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">containsReturnTrue_ifFound()</td>
-<td class="success">0.002s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">indexOfReturnFirstIndexOfElement_ifNotEmpty_ifFound()</td>
-<td class="success">0.003s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">indexOfReturnMinusOne_ifEmpty_ifNotFound()</td>
-<td class="success">0.004s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">lastIndexOfReturnLastIndexOfElement_ifNotEmpty_ifFound()</td>
+<td class="success">addShouldReturnTrue()</td>
 <td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">lastIndexOfReturnMinusOne_ifEmpty_ifNotFound()</td>
-<td class="success">0.014s</td>
+<td class="success">addWithKeyShouldSetValueByIndexPosition()</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">offerFirst()</td>
+<td class="success">clearShouldDecreaseSizeToZero()</td>
 <td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">offerLast()</td>
+<td class="success">containsShouldReturnFalse_ifNotFound()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">containsShouldReturnTrue_ifNotFound()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">indexOfShouldReturnIndex_ifFound()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">indexOfShouldReturnMinusOne_ifNotFound()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">isEmptyShouldReturnFalse_ifNotEmpty()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">isEmptyShouldReturnTrue_ifEmpty()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">lastIndexOfShouldReturnLastIndex_ifFound()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">lastIndexOfShouldReturnMinusOne_ifNotFound()</td>
 <td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">offerShouldAddValue()</td>
-<td class="success">0.004s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">poll()</td>
+<td class="success">removeByKeyShouldReturnNull_ifNotFound()</td>
 <td class="success">0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">pollLast()</td>
+<td class="success">removeByKeyShouldReturnValue_ifFound()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">removeByValueShouldReturnFalse_ifNotFound()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">removeByValueShouldReturnTrue_ifFound()</td>
 <td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">removeByIndex()</td>
-<td class="success">0.002s</td>
+<td class="success">removeRangeShouldRemovesValuesFromFirstKeyToLastKey()</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">removeByValue()</td>
+<td class="success">setShouldReturnNull_ifNotFound()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setShouldReturnValueAndReplaceOldValFromPosition_ifFound()</td>
+<td class="success">0.119s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">toArrayShouldReturnArrayOfValues_ifNotEmpty()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">toArrayShouldReturnNull_ifListIsEmpty()</td>
 <td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
@@ -179,7 +184,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 14 сент. 2022 г., 21:29:22</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 5 нояб. 2022 г., 21:42:38</p>
 </div>
 </div>
 </body>
