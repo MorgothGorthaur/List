@@ -1,3 +1,10 @@
-.git
 .idea
+.settings
+target/
+.classpath
+.project
 .gradle
+build/
+gradle/
+gradlew
+gradlew.bat
